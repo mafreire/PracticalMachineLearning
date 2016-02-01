@@ -341,22 +341,3 @@ pred20TestCases
 ```
 
 
-```{r, results=FALSE, echo=FALSE,warning=FALSE, message=FALSE}
-# Script that writes each of the 20 predictions into .txt files in order to be submitted  to Coursera for automated grading.
-
-pml_write_files = function(x){
-        
-        path <- "./QuizPredictions"
-        
-        for(i in 1:length(x)){
-                
-                filename = paste0("problem_id_",i,".txt")
-                write.table(x[i],file=file.path("./QuizPredictions", filename), quote=FALSE,row.names=FALSE,col.names=FALSE)
-                
-                }
-}
-
-pml_write_files(pred20TestCases)
-```
-
-
